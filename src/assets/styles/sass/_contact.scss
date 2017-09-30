@@ -1,0 +1,49 @@
+#contact{
+    width: 100%;
+    height: 0px;
+    background-color: $black;
+    color: $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .box{
+        margin: 0 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        margin-right: 10px;
+        max-height: 16px;
+    }
+    *{
+        opacity: 0;
+    }
+    a{
+        color: $grey;
+    }
+    .close{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 35px;
+        right: 40px;
+        transform: translateY(-15px);
+        cursor: pointer;
+        &::before, &::after{
+            position: absolute;
+            left: 14px;
+            content: ' ';
+            height: 30px;
+            width: 1px;
+            background-color: $grey;
+        }
+        &::before{
+            transform: rotate(45deg);
+        }
+        &::after{
+            transform: rotate(-45deg);
+        }
+    }
+}

@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
+/* line 1, ../sass/_reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 7, ../sass/_reset.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", "sans-serif";
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 10pt;
+  color: #404040;
+}
+
+/* line 17, ../sass/_reset.scss */
+p {
+  font-size: 1em;
+}
+
+/* line 21, ../sass/_reset.scss */
+h1 {
+  font-size: 3em;
+}
+
+/* line 25, ../sass/_reset.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 28, ../sass/_reset.scss */
+h3 {
+  font-size: 1.7em;
+  line-height: 1.5em;
+}
+
+/* line 33, ../sass/_reset.scss */
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 1, ../sass/_header.scss */
+#header {
+  width: 100%;
+  height: 18vh;
+  display: flex;
+  justify-content: flex-start;
+}
+/* line 6, ../sass/_header.scss */
+#header .block30, #header .block40 {
+  display: flex;
+  align-items: center;
+}
+/* line 10, ../sass/_header.scss */
+#header .block30 {
+  width: 30%;
+}
+/* line 13, ../sass/_header.scss */
+#header .block40 {
+  width: 40%;
+  justify-content: center;
+}
+/* line 17, ../sass/_header.scss */
+#header .block-left {
+  padding-left: 40px;
+}
+/* line 20, ../sass/_header.scss */
+#header .block-right {
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+/* line 23, ../sass/_header.scss */
+#header .block-right * {
+  margin-left: 40px;
+}
+/* line 28, ../sass/_header.scss */
+#header .logo-container .logo {
+  width: 14vh;
+  height: 14vh;
+  background-color: #404040;
+  color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 41, ../sass/_header.scss */
+.navlink {
+  text-decoration: none;
+  color: #404040;
+  position: relative;
+  cursor: pointer;
+}
+/* line 46, ../sass/_header.scss */
+.navlink::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  background-color: #404040;
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  transition: all .2s ease-in-out;
+}
+/* line 58, ../sass/_header.scss */
+.navlink:hover::after {
+  width: 12px;
+}
+
+/* line 64, ../sass/_header.scss */
+.active {
+  font-weight: 700;
+}
+
+/* line 1, ../sass/_home.scss */
+#intro {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* line 9, ../sass/_home.scss */
+#home-galery {
+  width: calc(100% - 6vw);
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+/* line 16, ../sass/_home.scss */
+#home-galery img {
+  width: calc(33.3% - 8px);
+  height: 180px;
+  margin-bottom: 15px;
+}
+
+/* line 1, ../sass/_contact.scss */
+#contact {
+  width: 100%;
+  height: 0px;
+  background-color: #404040;
+  color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+/* line 10, ../sass/_contact.scss */
+#contact .box {
+  margin: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 16, ../sass/_contact.scss */
+#contact img {
+  margin-right: 10px;
+  max-height: 16px;
+}
+/* line 20, ../sass/_contact.scss */
+#contact * {
+  opacity: 0;
+}
+/* line 23, ../sass/_contact.scss */
+#contact a {
+  color: #ececec;
+}
+/* line 26, ../sass/_contact.scss */
+#contact .close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+  transform: translateY(-15px);
+  cursor: pointer;
+}
+/* line 34, ../sass/_contact.scss */
+#contact .close::before, #contact .close::after {
+  position: absolute;
+  left: 14px;
+  content: ' ';
+  height: 30px;
+  width: 1px;
+  background-color: #ececec;
+}
+/* line 42, ../sass/_contact.scss */
+#contact .close::before {
+  transform: rotate(45deg);
+}
+/* line 45, ../sass/_contact.scss */
+#contact .close::after {
+  transform: rotate(-45deg);
+}

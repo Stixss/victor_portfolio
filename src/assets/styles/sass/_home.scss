@@ -1,0 +1,21 @@
+#intro{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#home-galery{
+    width: calc(100% - 6vw);
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    img{
+        width: calc(33.3% - 8px);
+        height: 180px;
+        margin-bottom: 15px;
+    }
+}
