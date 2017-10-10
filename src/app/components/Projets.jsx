@@ -5,6 +5,7 @@ export class Projets extends React.Component{
         return(
             <div>
                 Projets
+                <img src={"../../assets/images/galery/" + this.props.params.id+ ".png"} alt=""/>
             </div>
         );
     }

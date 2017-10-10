@@ -17,7 +17,7 @@ export class Header extends React.Component{
                 <div className="logo-container block40">
                     <Link className="navlink" to="/home">
                     <div className="logo">
-                        <p>Logo</p>
+                        <img src="../../assets/images/logo.png" alt=""/>
                     </div>
                     </Link>
                     {/* { replace with the logo } */}
