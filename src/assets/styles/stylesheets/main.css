@@ -50,53 +50,104 @@ a {
   height: 18vh;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
-/* line 6, ../sass/_header.scss */
+/* line 7, ../sass/_header.scss */
 #header .block30, #header .block40 {
   display: flex;
   align-items: center;
 }
-/* line 10, ../sass/_header.scss */
+/* line 11, ../sass/_header.scss */
 #header .block30 {
   width: 30%;
 }
-/* line 13, ../sass/_header.scss */
+/* line 14, ../sass/_header.scss */
 #header .block40 {
   width: 40%;
   justify-content: center;
 }
-/* line 17, ../sass/_header.scss */
+/* line 18, ../sass/_header.scss */
 #header .block-left {
   padding-left: 40px;
 }
-/* line 20, ../sass/_header.scss */
+/* line 21, ../sass/_header.scss */
 #header .block-right {
   justify-content: flex-end;
   padding-right: 40px;
 }
-/* line 23, ../sass/_header.scss */
+/* line 24, ../sass/_header.scss */
 #header .block-right * {
   margin-left: 40px;
 }
-/* line 28, ../sass/_header.scss */
-#header .logo-container .logo {
-  width: 14vh;
-  height: 14vh;
-  background-color: #404040;
-  color: #ececec;
+@media only screen and (max-width: 720px) {
+  /* line 1, ../sass/_header.scss */
+  #header {
+    display: none;
+  }
+}
+
+/* line 32, ../sass/_header.scss */
+#header-mobile {
+  width: 100%;
+  height: 18vh;
+  padding: 0 20px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 720px) {
+  /* line 32, ../sass/_header.scss */
+  #header-mobile {
+    display: flex;
+  }
+}
+/* line 42, ../sass/_header.scss */
+#header-mobile .mobile-block-right {
+  width: 10vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+/* line 50, ../sass/_header.scss */
+#header-mobile .mobile-block-right .hamburger .span {
+  width: 50px;
+  height: 4px;
+  background-color: #404040;
+  position: relative;
+}
+/* line 55, ../sass/_header.scss */
+#header-mobile .mobile-block-right .hamburger .span::before, #header-mobile .mobile-block-right .hamburger .span::after {
+  width: 50px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  background-color: #404040;
+}
+/* line 62, ../sass/_header.scss */
+#header-mobile .mobile-block-right .hamburger .span::before {
+  bottom: 14px;
+}
+/* line 65, ../sass/_header.scss */
+#header-mobile .mobile-block-right .hamburger .span::after {
+  bottom: -14px;
 }
 
-/* line 41, ../sass/_header.scss */
+/* line 73, ../sass/_header.scss */
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* line 80, ../sass/_header.scss */
 .navlink {
   text-decoration: none;
   color: #404040;
   position: relative;
   cursor: pointer;
 }
-/* line 46, ../sass/_header.scss */
+/* line 85, ../sass/_header.scss */
 .navlink::after {
   content: "";
   width: 0px;
@@ -108,12 +159,17 @@ a {
   transform: translateX(-50%);
   transition: all .2s ease-in-out;
 }
-/* line 58, ../sass/_header.scss */
+/* line 97, ../sass/_header.scss */
 .navlink:hover::after {
   width: 12px;
 }
 
-/* line 64, ../sass/_header.scss */
+/* line 104, ../sass/_header.scss */
+.no-after:hover::after {
+  width: 0px;
+}
+
+/* line 110, ../sass/_header.scss */
 .active {
   font-weight: 700;
 }
@@ -166,7 +222,7 @@ a {
   height: 0px;
   background-color: #404040;
   color: #ececec;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -217,4 +273,37 @@ a {
 /* line 45, ../sass/_contact.scss */
 #contact .close::after {
   transform: rotate(-45deg);
+}
+
+/* line 1, ../sass/_projets.scss */
+#projets {
+  width: 90%;
+  height: auto;
+  margin: 100px auto 0 auto;
+  display: flex;
+  justify-content: flex-start;
+}
+/* line 7, ../sass/_projets.scss */
+#projets .projets-menu, #projets .projets-description {
+  width: 25%;
+}
+/* line 10, ../sass/_projets.scss */
+#projets .projets-images {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 1, ../sass/_footer.scss */
+#footer {
+  width: 100%;
+  height: 100px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+/* line 8, ../sass/_footer.scss */
+#footer .footer-content {
+  font-size: 0.8em;
 }

@@ -1,0 +1,15 @@
+#projets{
+    width: 90%;
+    height: auto;
+    margin: 100px auto 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    .projets-menu, .projets-description{
+        width: 25%;
+    }
+    .projets-images{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -4,7 +4,7 @@ export class Contact extends React.Component{
 
     close_menu(){
         $("#contact *").animate({opacity: 0},400)
-        $("#contact").delay(400).animate({height: "0px"},400)
+        $("#contact").delay(400).animate({height: "0px"},400).css({display: 'none'})
     }
 
     render(){
